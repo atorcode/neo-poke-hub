@@ -1,10 +1,14 @@
-import { Hero } from "./components/Hero";
+import { NavBar } from "./components/nav-bar";
+import { Hero } from "./components/hero";
 
 const Home = () => {
   return (
-    <main className="flex h-screen justify-center">
-      <Hero />
-    </main>
+    <>
+      <NavBar />
+      <main className="flex h-screen justify-center">
+        <Hero />
+      </main>
+    </>
   );
 };
 

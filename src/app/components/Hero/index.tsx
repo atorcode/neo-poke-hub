@@ -1,4 +1,4 @@
-import { HeroDetails } from "../HeroDetails";
+import { HeroDetails } from "../hero-details";
 
 const fetchData = async (name: string) => {
   const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}/`);
@@ -6,10 +6,13 @@ const fetchData = async (name: string) => {
 };
 
 export const Hero = async () => {
-  const data = await fetchData("pidgeot");
+  const data = await fetchData("bulbasaur");
   console.log(data);
   return (
-    <section className="w-screen bg-red-500">
+    <section
+      className="justify-cente flex w-screen items-center bg-blue-500"
+      style={{ height: "95%" }}
+    >
       <HeroDetails {...data} />
     </section>
   );

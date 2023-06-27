@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
-import { HeroDetails } from "@/app/components/HeroDetails";
+import { HeroDetails } from "@/app/components/hero-details";
 import { rest, RestRequest, ResponseComposition, RestContext } from "msw";
 import { setupServer } from "msw/node";
 
@@ -15,6 +15,52 @@ const mockData = {
       type: { name: "psychic", url: "https://pokeapi.co/api/v2/type/14/" },
     },
   ],
+  stats: [
+    {
+      base_stat: 100,
+      effort: 0,
+      stat: { name: "hp", url: "https://pokeapi.co/api/v2/stat/1/" },
+    },
+    {
+      base_stat: 100,
+      effort: 0,
+      stat: { name: "attack", url: "https://pokeapi.co/api/v2/stat/2/" },
+    },
+    {
+      base_stat: 100,
+      effort: 0,
+      stat: { name: "defense", url: "https://pokeapi.co/api/v2/stat/3/" },
+    },
+    {
+      base_stat: 100,
+      effort: 0,
+      stat: {
+        name: "special-attack",
+        url: "https://pokeapi.co/api/v2/stat/4/",
+      },
+    },
+    {
+      base_stat: 100,
+      effort: 0,
+      stat: {
+        name: "special-defense",
+        url: "https://pokeapi.co/api/v2/stat/5/",
+      },
+    },
+    {
+      base_stat: 100,
+      effort: 0,
+      stat: { name: "speed", url: "https://pokeapi.co/api/v2/stat/6/" },
+    },
+  ],
+  sprites: {
+    other: {
+      home: {
+        front_default:
+          "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/151.png",
+      },
+    },
+  },
 };
 
 const server = setupServer(
