@@ -4,7 +4,18 @@ import { HeroDetails } from "@/app/components/HeroDetails";
 import { rest, RestRequest, ResponseComposition, RestContext } from "msw";
 import { setupServer } from "msw/node";
 
-const mockData = { name: "mew" };
+const mockData = {
+  id: 151,
+  name: "mew",
+  height: 4,
+  weight: 40,
+  types: [
+    {
+      slot: 1,
+      type: { name: "psychic", url: "https://pokeapi.co/api/v2/type/14/" },
+    },
+  ],
+};
 
 const server = setupServer(
   rest.get(

@@ -6,7 +6,7 @@ const fetchData = async (name: string) => {
 };
 
 export const Hero = async () => {
-  const data = await fetchData("pikachu");
+  const data = await fetchData("pidgeot");
   console.log(data);
   return (
     <section className="w-screen bg-red-500">
