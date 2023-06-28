@@ -3,6 +3,7 @@ import "@testing-library/jest-dom";
 import { HeroDetails } from "@/app/components/hero-details";
 import { rest, RestRequest, ResponseComposition, RestContext } from "msw";
 import { setupServer } from "msw/node";
+import { StatType } from "@/app/types/StatType";
 
 const mockData = {
   id: 151,
@@ -19,23 +20,32 @@ const mockData = {
     {
       base_stat: 100,
       effort: 0,
-      stat: { name: "hp", url: "https://pokeapi.co/api/v2/stat/1/" },
-    },
-    {
-      base_stat: 100,
-      effort: 0,
-      stat: { name: "attack", url: "https://pokeapi.co/api/v2/stat/2/" },
-    },
-    {
-      base_stat: 100,
-      effort: 0,
-      stat: { name: "defense", url: "https://pokeapi.co/api/v2/stat/3/" },
+      stat: {
+        name: "hp" as StatType,
+        url: "https://pokeapi.co/api/v2/stat/1/",
+      },
     },
     {
       base_stat: 100,
       effort: 0,
       stat: {
-        name: "special-attack",
+        name: "attack" as StatType,
+        url: "https://pokeapi.co/api/v2/stat/2/",
+      },
+    },
+    {
+      base_stat: 100,
+      effort: 0,
+      stat: {
+        name: "defense" as StatType,
+        url: "https://pokeapi.co/api/v2/stat/3/",
+      },
+    },
+    {
+      base_stat: 100,
+      effort: 0,
+      stat: {
+        name: "special-attack" as StatType,
         url: "https://pokeapi.co/api/v2/stat/4/",
       },
     },
@@ -43,14 +53,17 @@ const mockData = {
       base_stat: 100,
       effort: 0,
       stat: {
-        name: "special-defense",
+        name: "special-defense" as StatType,
         url: "https://pokeapi.co/api/v2/stat/5/",
       },
     },
     {
       base_stat: 100,
       effort: 0,
-      stat: { name: "speed", url: "https://pokeapi.co/api/v2/stat/6/" },
+      stat: {
+        name: "speed" as StatType,
+        url: "https://pokeapi.co/api/v2/stat/6/",
+      },
     },
   ],
   sprites: {

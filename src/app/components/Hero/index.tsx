@@ -6,7 +6,7 @@ const fetchData = async (name: string) => {
 };
 
 export const Hero = async () => {
-  const data = await fetchData("bulbasaur");
+  const data = await fetchData("mewtwo");
   console.log(data);
   return (
     <section
