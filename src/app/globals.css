@@ -3,9 +3,24 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --normal-type: #a8a77a;
+  --fighting-type: #c22e28;
+  --flying-type: #a98ff3;
+  --poison-type: #a33ea1;
+  --ground-type: #e2bf65;
+  --rock-type: #b6a136;
+  --bug-type: #a6b91a;
+  --ghost-type: #735797;
+  --steel-type: #b7b7ce;
+  --fire-type: #ee8130;
+  --water-type: #6390f0;
+  --grass-type: #7ac74c;
+  --electric-type: #f7d02c;
+  --psychic-type: #f95587;
+  --ice-type: #96d9d6;
+  --dragon-type: #6f35fc;
+  --dark-type: #705746;
+  --fairy-type: #d685ad;
 }
 
 *,

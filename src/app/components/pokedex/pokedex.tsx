@@ -7,14 +7,13 @@ type PokedexProps = {
 
 export const Pokedex = ({ pokedex }: PokedexProps) => {
   return (
-    <section className="flex gap-10 bg-blue-800">
+    <section
+      className="flex flex-wrap items-center justify-center gap-10"
+      style={{ backgroundColor: "#00022e" }}
+    >
       {pokedex.map((entry) => {
         return <PokedexEntry key={entry.id} {...entry} />;
       })}
     </section>
   );
 };
-
-// export const Pokedex = () => {
-//   return <section className="bg-blue-800"></section>;
-// };

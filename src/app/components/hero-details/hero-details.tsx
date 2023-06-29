@@ -3,6 +3,7 @@ import { addLeadingZeros } from "@/utils/addLeadingZeros";
 import { formatMeasurements } from "@/utils/formatHeightAndWeight";
 import { PokedexEntryType } from "@/app/types/PokedexEntryType";
 import { StatType } from "@/app/types/StatType";
+import { TypeBoxGroup } from "../type-box-group";
 
 type HeroDetailsProps = PokedexEntryType;
 
@@ -37,14 +38,25 @@ export const HeroDetails = ({
   return (
     <>
       <section className="flex w-3/6 flex-col items-center">
-        <div>
+        <div className="flex flex-col gap-3">
           <span className="text-xl">#{addLeadingZeros(id)}</span>
-          <h1 className="text-8xl">{name.toUpperCase()}</h1>
-          <ul className="flex gap-2">
+          <h1 className="text-7xl font-bold text-white">
+            {name.toUpperCase()}
+          </h1>
+          <TypeBoxGroup types={types} />
+          {/* <ul className="flex justify-start gap-2">
             {types.map((type, index) => {
-              return <li key={index}>{type.type.name}</li>;
+              return (
+                <li
+                  key={index}
+                  className="flex items-center justify-center px-3 py-1"
+                  style={{ backgroundColor: `var(--${type.type.name}-type)` }}
+                >
+                  {type.type.name}
+                </li>
+              );
             })}
-          </ul>
+          </ul> */}
           <ul>
             {stats.map((stat, index) => {
               return (
@@ -58,8 +70,10 @@ export const HeroDetails = ({
               );
             })}
           </ul>
-          <p>{formatMeasurements(height)} m</p>
-          <p>{formatMeasurements(weight)} kg</p>
+          <div>
+            <p>{formatMeasurements(height)} m</p>
+            <p>{formatMeasurements(weight)} kg</p>
+          </div>
         </div>
       </section>
       <div className="flex w-3/6 items-center justify-center">
