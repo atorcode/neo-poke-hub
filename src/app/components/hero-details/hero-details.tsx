@@ -1,6 +1,6 @@
 import { StatBar } from "../stat-bar";
-import { addLeadingZeros } from "@/utils/addLeadingZeros";
-import { formatMeasurements } from "@/utils/formatHeightAndWeight";
+import { addLeadingZeros } from "@/app/utils/addLeadingZeros";
+import { formatMeasurements } from "@/app/utils/formatHeightAndWeight";
 import { PokedexEntryType } from "@/app/types/PokedexEntryType";
 import { StatType } from "@/app/types/StatType";
 import { TypeBoxGroup } from "../type-box-group";
