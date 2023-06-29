@@ -3,10 +3,11 @@ import { Hero } from "./components/hero";
 import { SearchBar } from "./components/search-bar";
 import { Pokedex } from "./components/pokedex";
 import { NUMBER_OF_POKEMON } from "@/app/constants/constants";
+import { PokedexEntryType } from "./types/PokedexEntryType";
 
 const fetchData = async () => {
   let pokedex = [];
-  for (let i = 1; i <= NUMBER_OF_POKEMON; i++) {
+  for (let i = 1; i <= 5; i++) {
     const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${i}/`);
     const data = await response.json();
     pokedex.push(data);
@@ -15,15 +16,17 @@ const fetchData = async () => {
 };
 
 const Home = async () => {
-  const pokedex = await fetchData();
+  const pokedex: PokedexEntryType[] = await fetchData();
   return (
     <>
       <NavBar />
-      <main className="flex h-screen flex-col justify-center">
-        <Hero {...pokedex} />
-        <Pokedex />
+      <main className="flex flex-col justify-center">
+        <article className="flex h-screen flex-col justify-center">
+          <Hero {...pokedex[4]} />
+        </article>
+        <Pokedex pokedex={pokedex} />
       </main>
-      <SearchBar />
+      {/* <SearchBar /> */}
     </>
   );
 };

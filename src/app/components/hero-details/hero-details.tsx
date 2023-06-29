@@ -38,7 +38,7 @@ export const HeroDetails = ({
     <>
       <section className="flex w-3/6 flex-col items-center">
         <div>
-          <h2>#{addLeadingZeros(id)}</h2>
+          <span className="text-xl">#{addLeadingZeros(id)}</span>
           <h1 className="text-8xl">{name.toUpperCase()}</h1>
           <ul className="flex gap-2">
             {types.map((type, index) => {
@@ -49,7 +49,7 @@ export const HeroDetails = ({
             {stats.map((stat, index) => {
               return (
                 <li key={index} className="relative flex items-center gap-4">
-                  <span className="w-16">{formatStatName(stat.stat.name)}</span>{" "}
+                  <h2 className="w-16">{formatStatName(stat.stat.name)}</h2>{" "}
                   <span className="flex w-10 justify-center">
                     {stat.base_stat}
                   </span>
