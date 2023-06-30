@@ -9,11 +9,7 @@ export const TypeBoxGroup = ({ types }: TypeBoxGroupProps) => {
     <ul className="flex justify-start gap-2">
       {types.map((type, index) => {
         return (
-          <li
-            key={index}
-            className="flex items-center justify-center px-3 py-1"
-            style={{ backgroundColor: `var(--${type.type.name}-type)` }}
-          >
+          <li key={index} className="flex items-center justify-center">
             <TypeBox type={type} />
           </li>
         );
