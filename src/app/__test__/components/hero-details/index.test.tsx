@@ -19,6 +19,7 @@ beforeAll(() => server.listen());
 afterEach(() => server.resetHandlers());
 afterAll(() => server.close());
 
+// finish test cases
 describe("HeroDetails", () => {
   describe("heading", () => {
     it("displays the correct text from fetched data", async () => {

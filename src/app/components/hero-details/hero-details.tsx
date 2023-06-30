@@ -44,19 +44,6 @@ export const HeroDetails = ({
             {name.toUpperCase()}
           </h1>
           <TypeBoxGroup types={types} />
-          {/* <ul className="flex justify-start gap-2">
-            {types.map((type, index) => {
-              return (
-                <li
-                  key={index}
-                  className="flex items-center justify-center px-3 py-1"
-                  style={{ backgroundColor: `var(--${type.type.name}-type)` }}
-                >
-                  {type.type.name}
-                </li>
-              );
-            })}
-          </ul> */}
           <ul>
             {stats.map((stat, index) => {
               return (
@@ -76,9 +63,6 @@ export const HeroDetails = ({
           </div>
         </div>
       </section>
-      <div className="flex w-3/6 items-center justify-center">
-        <img src={sprites.other.home.front_default} alt={name} />
-      </div>
     </>
   );
 };
