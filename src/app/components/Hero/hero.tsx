@@ -5,11 +5,11 @@ type HeroProps = PokedexEntryType;
 
 export const Hero = (pokedexEntry: HeroProps) => {
   return (
-    <section
-      className="flex w-screen items-center justify-center bg-blue-500"
+    <article
+      className="flex h-screen w-screen items-center justify-center bg-blue-500"
       style={{ height: "95%" }}
     >
       <HeroDetails {...pokedexEntry} />
-    </section>
+    </article>
   );
 };

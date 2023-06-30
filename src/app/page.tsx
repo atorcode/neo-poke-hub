@@ -20,10 +20,8 @@ const Home = async () => {
   return (
     <>
       {/* <NavBar /> */}
-      <main className="flex flex-col justify-center">
-        <article className="flex h-screen flex-col justify-center">
-          <Hero {...pokedex[4]} />
-        </article>
+      <main className="h-screen">
+        <Hero {...pokedex[4]} />
         <Pokedex pokedex={pokedex} />
       </main>
       {/* <SearchBar /> */}
