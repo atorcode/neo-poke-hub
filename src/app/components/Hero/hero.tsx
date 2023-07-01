@@ -25,6 +25,7 @@ export const Hero = (pokedexEntry: HeroProps) => {
         size="7rem"
         positionType="absolute"
         dividerLength="13rem"
+        gap="6"
       />
       <div className="z-10 flex w-3/6 items-center justify-center">
         <img

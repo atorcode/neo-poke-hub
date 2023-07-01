@@ -42,7 +42,8 @@ export const PokedexEntryDetailsModal = (entry: PokedexEntryProps) => {
       <DividerGraphic
         size="5rem"
         positionType="relative"
-        dividerLength="30rem"
+        dividerLength="7rem"
+        gap="3"
       />
       <div className="absolute bottom-0 left-0 w-64 translate-x-8 translate-y-14">
         <img src={entry.sprites.other.home.front_default} alt={entry.name} />

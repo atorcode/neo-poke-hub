@@ -4,16 +4,18 @@ type DividerGraphicProps = {
   size: string;
   positionType: "absolute" | "relative";
   dividerLength: string;
+  gap: string;
 };
 
 export const DividerGraphic = ({
   size,
   positionType,
   dividerLength,
+  gap,
 }: DividerGraphicProps) => {
   return (
     <div
-      className={`${positionType} z-10 flex flex-col items-center justify-center gap-6 text-white`}
+      className={`${positionType} z-10 flex h-full flex-col items-center justify-center gap-${gap} text-white`}
     >
       <div
         style={{
