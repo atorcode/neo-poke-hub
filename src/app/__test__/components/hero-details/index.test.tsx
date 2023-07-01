@@ -4,7 +4,6 @@ import { HeroDetails } from "@/app/components/hero-details";
 import { rest, RestRequest, ResponseComposition, RestContext } from "msw";
 import { setupServer } from "msw/node";
 import { mewData } from "../../mocks/mew-data";
-import { StatType } from "@/app/types/StatType";
 
 const server = setupServer(
   rest.get(

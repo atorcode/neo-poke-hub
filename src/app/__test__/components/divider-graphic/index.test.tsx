@@ -1,20 +1,20 @@
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
-import { HeroDivider } from "@/app/components/hero-divider";
+import { DividerGraphic } from "@/app/components/divider-graphic";
 
-describe("HeroDivider", () => {
+describe("DividerGraphic", () => {
   it("displays top divider properly", () => {
-    render(<HeroDivider />);
+    render(<DividerGraphic />);
     const dividerElement = screen.getByTestId("divider-top");
     expect(dividerElement).toBeInTheDocument();
   });
   it("displays bottom divider properly", () => {
-    render(<HeroDivider />);
+    render(<DividerGraphic />);
     const dividerElement = screen.getByTestId("divider-bottom");
     expect(dividerElement).toBeInTheDocument();
   });
   it("displays divider logo properly", () => {
-    render(<HeroDivider />);
+    render(<DividerGraphic />);
     const logoElement = screen.getByTestId("divider-logo");
     expect(logoElement).toBeInTheDocument();
   });

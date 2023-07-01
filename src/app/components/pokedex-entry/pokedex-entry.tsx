@@ -1,11 +1,16 @@
-import { PokedexEntryType } from "@/app/types/PokedexEntryType";
+"use client";
+
 import { ExpandButton } from "../expand-button";
 import { TypeBoxGroup } from "../type-box-group";
 import { addLeadingZeros } from "@/app/utils/addLeadingZeros";
+import { PokedexEntryDetailsModal } from "../pokedex-entry-details-modal";
+import { PokedexEntryProps } from "@/app/types/PokedexEntryProps";
 
-type PokedexEntryProps = PokedexEntryType;
-
-export const PokedexEntry = (entry: PokedexEntryProps) => {
+export const PokedexEntry = ({
+  entry,
+  expandedModal,
+  setExpandedModal,
+}: PokedexEntryProps) => {
   return (
     <article
       className="relative h-96 rounded-3xl"
@@ -26,7 +31,7 @@ export const PokedexEntry = (entry: PokedexEntryProps) => {
             }}
           ></div>
         </div>
-        <ExpandButton />
+        <ExpandButton id={entry.id} setExpandedModal={setExpandedModal} />
         <div className="relative flex flex-col items-center justify-center gap-1 px-5 text-white">
           <h3 className="text-lg font-bold">#{addLeadingZeros(entry.id)}</h3>
           <h2 className="mb-2 text-3xl font-bold">
@@ -38,6 +43,7 @@ export const PokedexEntry = (entry: PokedexEntryProps) => {
       <div className="absolute bottom-0 left-1/2 w-64 -translate-x-1/2 translate-y-14">
         <img src={entry.sprites.other.home.front_default} alt={entry.name} />
       </div>
+      {expandedModal === entry.id && <PokedexEntryDetailsModal {...entry} />}
     </article>
   );
 };
