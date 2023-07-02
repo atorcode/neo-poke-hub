@@ -10,12 +10,12 @@ describe("Footer", () => {
     );
     expect(attributionElement).toBeInTheDocument();
   });
-  it("renders social buttons correctly", () => {
+  it("renders external links correctly", () => {
     render(<Footer />);
-    const buttonElements = screen.getAllByRole("button");
-    expect(buttonElements.length).toBe(2);
-    buttonElements.forEach((button) => {
-      expect(button).toBeInTheDocument();
+    const linkElements = screen.getAllByRole("link");
+    expect(linkElements.length).toBe(3);
+    linkElements.forEach((link) => {
+      expect(link).toBeInTheDocument();
     });
   });
 });

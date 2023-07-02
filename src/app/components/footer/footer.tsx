@@ -17,12 +17,23 @@ export const Footer = () => {
         <p>&#169; 2023 Alberto Torrigiotti</p>
       </div>
       <div className="flex h-full items-center gap-8 text-3xl">
-        <button>
+        <a href="https://github.com/atorcode" target="_blank" rel="noreferrer">
           <FaGithub />
-        </button>
-        <button>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/alberto-torrigiotti/"
+          target="_blank"
+          rel="noreferrer"
+        >
           <FaLinkedin />
-        </button>
+        </a>
+        <a href="https://atorcode.com" target="_blank" rel="noreferrer">
+          <img
+            src="/portfolio-icon.svg"
+            alt="Portfolio Icon"
+            style={{ width: "30px", height: "30px" }}
+          />
+        </a>
       </div>
     </section>
   );
