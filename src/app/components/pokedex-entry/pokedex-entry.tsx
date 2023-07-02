@@ -43,7 +43,12 @@ export const PokedexEntry = ({
       <div className="absolute bottom-0 left-1/2 w-64 -translate-x-1/2 translate-y-14">
         <img src={entry.sprites.other.home.front_default} alt={entry.name} />
       </div>
-      {expandedModal === entry.id && <PokedexEntryDetailsModal {...entry} />}
+      {expandedModal === entry.id && (
+        <PokedexEntryDetailsModal
+          entry={entry}
+          setExpandedModal={setExpandedModal}
+        />
+      )}
     </article>
   );
 };

@@ -1,53 +1,37 @@
-import { TypeBoxGroup } from "../type-box-group";
-import { addLeadingZeros } from "@/app/utils/addLeadingZeros";
-import { formatMeasurements } from "@/app/utils/formatMeasurements";
-import { PokedexEntryType } from "@/app/types/PokedexEntryType";
-import { RxRulerSquare } from "react-icons/rx";
-import { IoScale } from "react-icons/io5";
-import { PokedexEntryBlurEffect } from "../pokedex-entry-blur-effect/pokedex-entry-blur-effect";
+"use client";
+import { RiCloseCircleLine } from "react-icons/ri";
 import { DividerGraphic } from "../divider-graphic";
+import { PokedexEntryDetailsModalPokemonSection } from "../pokedex-entry-details-modal-pokemon-section";
+import { PokemonStats } from "../pokemon-stats";
+import { PokedexEntryType } from "@/app/types/PokedexEntryType";
 
-type PokedexEntryProps = PokedexEntryType;
+type PokedexEntryDetailsModalProps = {
+  entry: PokedexEntryType;
+  setExpandedModal: React.Dispatch<React.SetStateAction<number>>;
+};
 
-export const PokedexEntryDetailsModal = (entry: PokedexEntryProps) => {
+export const PokedexEntryDetailsModal = ({
+  entry,
+  setExpandedModal,
+}: PokedexEntryDetailsModalProps) => {
   return (
     <article
-      className="fixed left-1/2 top-1/2 z-50 h-96  -translate-x-1/2 -translate-y-1/2 rounded-3xl"
+      className="fixed left-1/2 top-1/2 z-50 flex h-96 -translate-x-1/2 -translate-y-1/2 justify-start gap-32 rounded-3xl text-white"
       style={{
         width: "60rem",
         backgroundColor: "#00011a",
         border: "1px solid rgb(35, 40, 60)",
       }}
     >
-      <div className="absolute left-0 h-full overflow-hidden rounded-3xl">
-        <div
-          className="relative flex flex-col items-center justify-center gap-2 px-5 pt-4 font-bold text-white"
-          style={{ width: "318px" }}
-        >
-          <h3 className="text-lg">#{addLeadingZeros(entry.id)}</h3>
-          <h2 className="mb-2 text-3xl">{entry.name.toUpperCase()}</h2>
-          <TypeBoxGroup types={entry.types} />
-          <ul className="flex gap-6 pt-3">
-            <li className="flex items-center justify-center gap-3">
-              <RxRulerSquare className="text-2xl" />
-              {formatMeasurements(entry.height)} m
-            </li>
-            <li className="flex items-center justify-center gap-3">
-              <IoScale className="text-2xl" />
-              {formatMeasurements(entry.weight)} kg
-            </li>
-          </ul>
-        </div>
-      </div>
-      <DividerGraphic
-        size="5rem"
-        positionType="relative"
-        dividerLength="7rem"
-        gap="3"
-      />
-      <div className="absolute bottom-0 left-0 w-64 translate-x-8 translate-y-14">
-        <img src={entry.sprites.other.home.front_default} alt={entry.name} />
-      </div>
+      <PokedexEntryDetailsModalPokemonSection {...entry} />
+      <DividerGraphic size="5rem" dividerLength="7rem" gap="3" left="318px" />
+      <PokemonStats stats={entry.stats} gap="4" />
+      <button
+        className="absolute right-3 top-3"
+        onClick={() => setExpandedModal(-1)}
+      >
+        <RiCloseCircleLine className="h-10 w-10" />
+      </button>
     </article>
   );
 };

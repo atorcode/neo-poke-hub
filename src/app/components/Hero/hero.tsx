@@ -21,12 +21,7 @@ export const Hero = (pokedexEntry: HeroProps) => {
         style={{ width: "40vw", maxWidth: "600px" }}
       />
       <HeroDetails {...pokedexEntry} />
-      <DividerGraphic
-        size="7rem"
-        positionType="absolute"
-        dividerLength="13rem"
-        gap="6"
-      />
+      <DividerGraphic size="7rem" dividerLength="13rem" gap="6" />
       <div className="z-10 flex w-3/6 items-center justify-center">
         <img
           src={pokedexEntry.sprites.other.home.front_default}

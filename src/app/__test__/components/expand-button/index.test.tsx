@@ -4,7 +4,8 @@ import { ExpandButton } from "@/app/components/expand-button";
 
 describe("ExpandButton", () => {
   it("renders the correct text", () => {
-    render(<ExpandButton />);
+    const mockSetState = jest.fn();
+    render(<ExpandButton id={151} setExpandedModal={mockSetState} />);
     const buttonElement = screen.getByRole("button", {
       name: /^expand$/i,
     });

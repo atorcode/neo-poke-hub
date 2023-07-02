@@ -30,4 +30,5 @@ describe("PokedexEntryDetailsModal", () => {
     const imgElement = screen.getByAltText(/^mew$/i);
     expect(imgElement).toBeInTheDocument();
   });
+  // Add stats section tests
 });

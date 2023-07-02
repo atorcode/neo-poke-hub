@@ -2,20 +2,21 @@ import { CgPokemon } from "react-icons/cg";
 
 type DividerGraphicProps = {
   size: string;
-  positionType: "absolute" | "relative";
   dividerLength: string;
   gap: string;
+  left?: string;
 };
 
 export const DividerGraphic = ({
   size,
-  positionType,
   dividerLength,
   gap,
+  left,
 }: DividerGraphicProps) => {
   return (
     <div
-      className={`${positionType} z-10 flex h-full flex-col items-center justify-center gap-${gap} text-white`}
+      className={`absolute z-10 flex h-full flex-col items-center justify-center gap-${gap} text-white`}
+      style={{ left: `${left}` }}
     >
       <div
         style={{
