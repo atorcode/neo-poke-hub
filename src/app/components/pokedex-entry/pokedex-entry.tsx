@@ -31,7 +31,11 @@ export const PokedexEntry = ({
             }}
           ></div>
         </div>
-        <ExpandButton id={entry.id} setExpandedModal={setExpandedModal} />
+        <ExpandButton
+          id={entry.id}
+          setExpandedModal={setExpandedModal}
+          type={entry.types[0].type.name}
+        />
         <div className="relative flex flex-col items-center justify-center gap-1 px-5 text-white">
           <h3 className="text-lg font-bold">#{addLeadingZeros(entry.id)}</h3>
           <h2 className="mb-2 text-3xl font-bold">
