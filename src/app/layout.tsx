@@ -18,7 +18,12 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         {children}
-        <Footer />
+        <div
+          className="flex items-center justify-center"
+          style={{ backgroundColor: "#101114" }}
+        >
+          <Footer />
+        </div>
       </body>
     </html>
   );

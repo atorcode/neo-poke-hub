@@ -15,7 +15,8 @@ export const PokedexEntry = ({
     <article
       className="relative h-96 rounded-3xl"
       style={{
-        width: "20rem",
+        maxWidth: "20rem",
+        minWidth: "16rem",
         backgroundColor: "#00011a",
         border: "1px solid rgb(35, 40, 60)",
       }}
