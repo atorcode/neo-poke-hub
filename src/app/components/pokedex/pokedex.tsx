@@ -12,8 +12,8 @@ export const Pokedex = ({ pokedex }: PokedexProps) => {
   const [expandedModal, setExpandedModal] = useState<number>(-1);
   return (
     <section
-      className="flex flex-wrap justify-center gap-x-10 gap-y-20 pb-60 pt-32"
-      style={{ minHeight: "800px", backgroundColor: "#121316" }}
+      className="flex flex-wrap justify-center gap-x-10 gap-y-20 pb-60 pt-24"
+      style={{ minHeight: "800px", backgroundColor: "#101114" }}
     >
       {pokedex.map((entry) => {
         return (

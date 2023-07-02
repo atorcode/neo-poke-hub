@@ -52,5 +52,17 @@ describe("PokedexEntryDetailsModal", () => {
     const imgElement = screen.getByAltText(/^mew$/i);
     expect(imgElement).toBeInTheDocument();
   });
-  // Add stats section tests
+  it("renders the stats correctly", () => {
+    render(
+      <PokedexEntryDetailsModal
+        entry={mewData}
+        setExpandedModal={mockSetState}
+      />
+    );
+  });
+  const statElements = screen.getAllByText("100");
+  expect(statElements.length).toBe(6);
+  statElements.forEach((element) => {
+    expect(element).toBeInTheDocument();
+  });
 });

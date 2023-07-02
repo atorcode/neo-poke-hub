@@ -10,11 +10,21 @@ type PokemonStatsProps = {
   }[];
   gap?: string;
   zIndex: string;
+  justify?: string;
 };
 
-export const PokemonStats = ({ stats, gap, zIndex }: PokemonStatsProps) => {
+export const PokemonStats = ({
+  stats,
+  gap,
+  zIndex,
+  justify,
+}: PokemonStatsProps) => {
   return (
-    <section className={`z-${zIndex} flex items-center justify-center`}>
+    <section
+      className={`z-${zIndex} flex items-center justify-${
+        justify ? justify : "center"
+      }`}
+    >
       <ul className={`flex flex-col gap-${gap}`}>
         {stats.map((stat, index) => {
           return (

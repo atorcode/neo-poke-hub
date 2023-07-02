@@ -16,14 +16,12 @@ export const HeroDetails = ({
 }: HeroDetailsProps) => {
   return (
     <>
-      <section className="flex w-3/6 flex-col items-center">
+      <section className="flex w-3/6 flex-col items-center text-white">
         <div className="flex flex-col gap-3">
-          <span className="text-xl">#{addLeadingZeros(id)}</span>
-          <h1 className="text-7xl font-bold text-white">
-            {name.toUpperCase()}
-          </h1>
+          <h2 className="text-xl">#{addLeadingZeros(id)}</h2>
+          <h1 className="text-7xl font-bold">{name.toUpperCase()}</h1>
           <TypeBoxGroup types={types} />
-          <PokemonStats stats={stats} zIndex="10" />
+          <PokemonStats stats={stats} zIndex="10" justify="start" />
           <div>
             <p>{formatMeasurements(height)} m</p>
             <p>{formatMeasurements(weight)} kg</p>

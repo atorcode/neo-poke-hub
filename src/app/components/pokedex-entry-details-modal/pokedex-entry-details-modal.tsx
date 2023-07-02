@@ -21,7 +21,7 @@ export const PokedexEntryDetailsModal = ({
         className="fixed left-1/2 top-1/2 z-50 flex h-96 -translate-x-1/2 -translate-y-1/2 justify-start gap-32 rounded-3xl text-white"
         style={{
           width: "60rem",
-          backgroundColor: "#00011a",
+          background: "linear-gradient(45deg, #00011a 0%, #220000 100%)",
           border: "1px solid rgb(35, 40, 60)",
         }}
       >

@@ -5,6 +5,8 @@ import { rest, RestRequest, ResponseComposition, RestContext } from "msw";
 import { setupServer } from "msw/node";
 import { mewData } from "../../mocks/mew-data";
 
+// hero image is not tested in this file
+
 const server = setupServer(
   rest.get(
     `https://pokeapi.co/api/v2/pokemon/mew/`,
@@ -18,16 +20,34 @@ beforeAll(() => server.listen());
 afterEach(() => server.resetHandlers());
 afterAll(() => server.close());
 
-// finish test cases
 describe("HeroDetails", () => {
-  describe("heading", () => {
-    it("displays the correct text from fetched data", async () => {
-      render(<HeroDetails {...mewData} />);
-      const headingElement = await screen.findByRole("heading", {
-        level: 1,
-        name: /^mew$/i,
-      });
-      expect(headingElement).toBeInTheDocument();
+  it("displays the correct heading", async () => {
+    render(<HeroDetails {...mewData} />);
+    const nameElement = await screen.findByRole("heading", {
+      level: 1,
+      name: /^mew$/i,
+    });
+    expect(nameElement).toBeInTheDocument();
+  });
+  it("displays the correct Pokedex number", async () => {
+    render(<HeroDetails {...mewData} />);
+    const pokedexNumberElement = await screen.findByRole("heading", {
+      level: 2,
+      name: "#151",
+    });
+    expect(pokedexNumberElement).toBeInTheDocument();
+  });
+  it("displays the correct types", async () => {
+    render(<HeroDetails {...mewData} />);
+    const typeElement = await screen.findByText(/^psychic$/i);
+    expect(typeElement).toBeInTheDocument();
+  });
+  it("displays the correct stats", async () => {
+    render(<HeroDetails {...mewData} />);
+    const statElements = await screen.findAllByText("100");
+    expect(statElements.length).toBe(6);
+    statElements.forEach((element) => {
+      expect(element).toBeInTheDocument();
     });
   });
 });

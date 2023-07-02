@@ -20,8 +20,13 @@ const Home = async () => {
   return (
     <>
       {/* <NavBar /> */}
-      <main className="h-screen">
-        <Hero {...pokedex[4]} />
+      <main>
+        <div
+          className="relative h-screen"
+          style={{ backgroundColor: "#101114" }}
+        >
+          <Hero {...pokedex[4]} />
+        </div>
         <Pokedex pokedex={pokedex} />
       </main>
       {/* <SearchBar /> */}
