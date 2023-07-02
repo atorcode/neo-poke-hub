@@ -5,6 +5,7 @@ type DividerGraphicProps = {
   dividerLength: string;
   gap: string;
   left?: string;
+  zIndex: string;
 };
 
 export const DividerGraphic = ({
@@ -12,10 +13,11 @@ export const DividerGraphic = ({
   dividerLength,
   gap,
   left,
+  zIndex,
 }: DividerGraphicProps) => {
   return (
     <div
-      className={`absolute z-10 flex h-full flex-col items-center justify-center gap-${gap} text-white`}
+      className={`absolute z-${zIndex} flex h-full flex-col items-center justify-center gap-${gap} text-white`}
       style={{ left: `${left}` }}
     >
       <div

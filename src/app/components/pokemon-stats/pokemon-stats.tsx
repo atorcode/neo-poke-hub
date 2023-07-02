@@ -9,11 +9,12 @@ type PokemonStatsProps = {
     stat: { name: StatType; url: string };
   }[];
   gap?: string;
+  zIndex: string;
 };
 
-export const PokemonStats = ({ stats, gap }: PokemonStatsProps) => {
+export const PokemonStats = ({ stats, gap, zIndex }: PokemonStatsProps) => {
   return (
-    <section className="flex items-center justify-center">
+    <section className={`z-${zIndex} flex items-center justify-center`}>
       <ul className={`flex flex-col gap-${gap}`}>
         {stats.map((stat, index) => {
           return (

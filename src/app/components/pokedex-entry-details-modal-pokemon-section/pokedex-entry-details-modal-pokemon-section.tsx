@@ -13,7 +13,7 @@ export const PokedexEntryDetailsModalPokemonSection = (
   entry: PokedexEntryDetailsModalPokemonSectionProps
 ) => {
   return (
-    <section className="flex h-full items-start">
+    <section className="z-50 flex h-full items-start">
       <div
         className="relative flex flex-col items-center justify-center gap-2 overflow-hidden px-5 pt-4 font-bold"
         style={{ width: "318px" }}

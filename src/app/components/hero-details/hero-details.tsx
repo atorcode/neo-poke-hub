@@ -23,7 +23,7 @@ export const HeroDetails = ({
             {name.toUpperCase()}
           </h1>
           <TypeBoxGroup types={types} />
-          <PokemonStats stats={stats} />
+          <PokemonStats stats={stats} zIndex="10" />
           <div>
             <p>{formatMeasurements(height)} m</p>
             <p>{formatMeasurements(weight)} kg</p>
