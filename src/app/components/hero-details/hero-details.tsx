@@ -3,6 +3,9 @@ import { formatMeasurements } from "@/app/utils/formatMeasurements";
 import { PokedexEntryType } from "@/app/types/PokedexEntryType";
 import { TypeBoxGroup } from "../type-box-group";
 import { PokemonStats } from "../pokemon-stats";
+import { RxRulerSquare } from "react-icons/rx";
+import { PokemonMeasurements } from "../pokemon-measurements";
+import { IoScale } from "react-icons/io5";
 
 type HeroDetailsProps = PokedexEntryType;
 
@@ -22,10 +25,7 @@ export const HeroDetails = ({
           <h1 className="text-7xl font-bold">{name.toUpperCase()}</h1>
           <TypeBoxGroup types={types} />
           <PokemonStats stats={stats} zIndex="10" justify="start" />
-          <div>
-            <p>{formatMeasurements(height)} m</p>
-            <p>{formatMeasurements(weight)} kg</p>
-          </div>
+          <PokemonMeasurements height={height} weight={weight} />
         </div>
       </section>
     </>
