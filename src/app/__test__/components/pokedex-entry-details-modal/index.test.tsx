@@ -59,11 +59,11 @@ describe("PokedexEntryDetailsModal", () => {
         setExpandedModal={mockSetState}
       />
     );
-  });
-  // failing for some reason
-  const statElements = screen.getAllByText("100");
-  expect(statElements.length).toBe(6);
-  statElements.forEach((element) => {
-    expect(element).toBeInTheDocument();
+    // failing for some reason
+    const statElements = screen.getAllByText(/100/);
+    expect(statElements.length).toBe(6);
+    statElements.forEach((element) => {
+      expect(element).toBeInTheDocument();
+    });
   });
 });
