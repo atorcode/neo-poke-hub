@@ -21,7 +21,7 @@ export const PokemonStats = ({
 }: PokemonStatsProps) => {
   return (
     <section
-      className={`z-${zIndex} flex items-center justify-${
+      className={`z-${zIndex} flex items-center font-bold justify-${
         justify ? justify : "center"
       }`}
     >

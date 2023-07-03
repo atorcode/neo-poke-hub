@@ -7,7 +7,7 @@ import { PokedexEntryType } from "./types/PokedexEntryType";
 
 const fetchData = async () => {
   let pokedex = [];
-  for (let i = 1; i <= 40; i++) {
+  for (let i = 816; i <= 840; i++) {
     const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${i}/`);
     const data = await response.json();
     pokedex.push(data);
@@ -25,7 +25,7 @@ const Home = async () => {
           className="relative h-screen"
           style={{ backgroundColor: "#101114" }}
         >
-          <Hero {...pokedex[4]} />
+          <Hero {...pokedex[0]} />
         </div>
         <Pokedex pokedex={pokedex} />
       </main>
