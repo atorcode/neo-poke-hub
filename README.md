@@ -1,34 +1,35 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# NeoPokeHub
 
-## Getting Started
+<img width="800" src="./public/NeoPokeHub.png" alt="NeoPokeHub's homepage image">
 
-First, run the development server:
+## Live Demo
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+Coming soon
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Summary
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+NeoPokeHub provides an elegantly streamlined experience for trainers in search of detailed Pokemon information.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## To Do
 
-## Learn More
+- Add Who's that Pokemon minigame
+- Break components down further and organize tests better
+- Improve animations
 
-To learn more about Next.js, take a look at the following resources:
+## Languages and Technologies
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- TypeScript
+- React
+- Next.js
+- Tailwind CSS
+- Jest
+- React Testing Library
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Techniques
 
-## Deploy on Vercel
+- Test-driven Development with unit tests
+- Server-side Rendering
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## License
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Licensed under the [MIT License](LICENSE)

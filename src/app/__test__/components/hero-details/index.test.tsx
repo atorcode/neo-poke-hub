@@ -24,7 +24,7 @@ describe("HeroDetails", () => {
   it("displays the correct heading", async () => {
     render(<HeroDetails {...mewData} />);
     const nameElement = await screen.findByRole("heading", {
-      level: 1,
+      level: 2,
       name: /^mew$/i,
     });
     expect(nameElement).toBeInTheDocument();
@@ -32,7 +32,7 @@ describe("HeroDetails", () => {
   it("displays the correct Pokedex number", async () => {
     render(<HeroDetails {...mewData} />);
     const pokedexNumberElement = await screen.findByRole("heading", {
-      level: 2,
+      level: 3,
       name: "#151",
     });
     expect(pokedexNumberElement).toBeInTheDocument();

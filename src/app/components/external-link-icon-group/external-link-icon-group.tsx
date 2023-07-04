@@ -2,7 +2,7 @@ import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 export const ExternalLinkIconGroup = () => {
   return (
-    <div className="flex h-full items-center gap-2 text-3xl sm:gap-4 md:gap-6 lg:gap-8">
+    <div className="flex h-full items-center justify-end gap-2 text-3xl text-gray-200 sm:gap-4 md:gap-6 lg:gap-8">
       <a href="https://github.com/atorcode" target="_blank" rel="noreferrer">
         <FaGithub />
       </a>
