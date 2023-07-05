@@ -1,9 +1,7 @@
-import { NavBar } from "./components/nav-bar";
 import { Hero } from "./components/hero";
-// import { SearchBar } from "./components/search-bar";
-import { Pokedex } from "./components/pokedex";
 import { NUMBER_OF_POKEMON } from "@/app/constants/constants";
 import { PokedexEntryType } from "./types/PokedexEntryType";
+import { DisplayedPokemon } from "./components/displayed-pokemon";
 
 const fetchData = async () => {
   let pokedex = [];
@@ -19,7 +17,6 @@ const Home = async () => {
   const pokedex: PokedexEntryType[] = await fetchData();
   return (
     <>
-      {/* <NavBar /> */}
       <main>
         <div
           className="relative h-screen"
@@ -27,9 +24,8 @@ const Home = async () => {
         >
           <Hero {...pokedex[0]} />
         </div>
-        <Pokedex pokedex={pokedex} />
+        <DisplayedPokemon pokedex={pokedex} />
       </main>
-      {/* <SearchBar /> */}
     </>
   );
 };

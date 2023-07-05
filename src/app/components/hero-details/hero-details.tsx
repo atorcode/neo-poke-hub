@@ -1,11 +1,18 @@
 import { addLeadingZeros } from "@/app/utils/addLeadingZeros";
-import { formatMeasurements } from "@/app/utils/formatMeasurements";
 import { PokedexEntryType } from "@/app/types/PokedexEntryType";
 import { TypeBoxGroup } from "../type-box-group";
 import { PokemonStats } from "../pokemon-stats";
-import { RxRulerSquare } from "react-icons/rx";
 import { PokemonMeasurements } from "../pokemon-measurements";
-import { IoScale } from "react-icons/io5";
+import { StatType } from "@/app/types/StatType";
+
+type StatsInfoType = {
+  base_stat: number;
+  effort: number;
+  stat: {
+    name: StatType;
+    url: string;
+  };
+};
 
 type HeroDetailsProps = PokedexEntryType;
 
