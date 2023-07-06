@@ -22,9 +22,9 @@ export const SearchBar = ({ pokedex, setDisplayedPokemon }: SearchBarProps) => {
 
   return (
     <div
-      className="relative m-auto h-12 w-2/6 rounded-md border-2 bg-gray-200"
+      className="relative h-12 w-2/6 rounded-md border-2 bg-gray-200"
       style={{
-        minWidth: "300px",
+        minWidth: "714px",
         backgroundColor: "transparent",
       }}
     >
