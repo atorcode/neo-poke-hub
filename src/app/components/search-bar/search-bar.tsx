@@ -2,16 +2,17 @@
 
 import { BsSearch } from "react-icons/bs";
 import { useState } from "react";
-import { PokedexEntryType } from "@/app/types/PokedexEntryType";
+import { PokedexEntryType } from "@/app/types/pokedex-entry-type";
+import { useDisplayedPokemonContext } from "@/app/contexts/displayed-pokemon-context";
 
 type SearchBarProps = {
   pokedex: PokedexEntryType[];
-  setDisplayedPokemon: React.Dispatch<React.SetStateAction<PokedexEntryType[]>>;
 };
 
-export const SearchBar = ({ pokedex, setDisplayedPokemon }: SearchBarProps) => {
+export const SearchBar = ({ pokedex }: SearchBarProps) => {
   const [pokemonName, setPokemonName] = useState<string>("");
-  console.log(setDisplayedPokemon);
+
+  const { setDisplayedPokemon } = useDisplayedPokemonContext();
 
   const filterPokemon = (name: string) => {
     const filteredPokemon = pokedex.filter((entry) => {

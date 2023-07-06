@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import { TypeBoxGroup } from "@/app/components/type-box-group";
-import { PokemonTypeType } from "@/app/types/PokemonTypeType";
+import { PokemonTypeType } from "@/app/types/pokemon-type-type";
 
 const testTypes1 = [
   {
@@ -12,10 +12,10 @@ const testTypes1 = [
 const testTypes2: PokemonTypeType[] = ["psychic"];
 
 describe("TypeBoxGroup", () => {
-  it("renders properly with test object", () => {
-    render(<TypeBoxGroup types={testTypes1} />);
+  it("renders properly with test object and grid", () => {
+    render(<TypeBoxGroup types={testTypes1} layout="grid" />);
     const ulElement = screen.getByRole("list");
-    expect(ulElement).toBeInTheDocument();
+    expect(ulElement).toHaveClass("grid");
   });
 
   it("renders properly with test string", () => {

@@ -1,6 +1,6 @@
 "use client";
 
-import { PokedexEntryType } from "@/app/types/PokedexEntryType";
+import { PokedexEntryType } from "@/app/types/pokedex-entry-type";
 import { PokedexEntry } from "../pokedex-entry";
 import { useState } from "react";
 

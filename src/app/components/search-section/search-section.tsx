@@ -1,16 +1,12 @@
-import { PokedexEntryType } from "@/app/types/PokedexEntryType";
+import { PokedexEntryType } from "@/app/types/pokedex-entry-type";
 import { SearchBar } from "../search-bar";
 import { SearchByType } from "../search-by-type";
 
 type SearchSectionProps = {
   pokedex: PokedexEntryType[];
-  setDisplayedPokemon: React.Dispatch<React.SetStateAction<PokedexEntryType[]>>;
 };
 
-export const SearchSection = ({
-  pokedex,
-  setDisplayedPokemon,
-}: SearchSectionProps) => {
+export const SearchSection = ({ pokedex }: SearchSectionProps) => {
   return (
     <section
       className="flex flex-col items-center justify-center gap-8"
@@ -19,8 +15,8 @@ export const SearchSection = ({
         background: "linear-gradient(rgb(77,144,213), #101114",
       }}
     >
-      <SearchBar pokedex={pokedex} setDisplayedPokemon={setDisplayedPokemon} />
-      <SearchByType />
+      <SearchBar pokedex={pokedex} />
+      <SearchByType pokedex={pokedex} />
     </section>
   );
 };

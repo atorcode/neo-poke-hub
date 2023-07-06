@@ -2,9 +2,9 @@
 
 import { ExpandButton } from "../expand-button";
 import { TypeBoxGroup } from "../type-box-group";
-import { addLeadingZeros } from "@/app/utils/addLeadingZeros";
+import { addLeadingZeros } from "@/app/utils/add-leading-zeros";
 import { PokedexEntryDetailsModal } from "../pokedex-entry-details-modal";
-import { PokedexEntryProps } from "@/app/types/PokedexEntryProps";
+import { PokedexEntryProps } from "@/app/types/pokedex-entry-props";
 
 export const PokedexEntry = ({
   entry,

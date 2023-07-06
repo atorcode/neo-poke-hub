@@ -1,4 +1,4 @@
-import { PokemonTypeType } from "@/app/types/PokemonTypeType";
+import { PokemonTypeType } from "@/app/types/pokemon-type-type";
 
 export const NUMBER_OF_POKEMON = 1010;
 export const POKEMON_TYPES: PokemonTypeType[] = [

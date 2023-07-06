@@ -1,6 +1,6 @@
 import { StatType } from "@/app/types/StatType";
 import { StatBar } from "../stat-bar";
-import { formatStatName } from "@/app/utils/formatStatName";
+import { formatStatName } from "@/app/utils/format-stat-name";
 
 type PokemonStatsProps = {
   stats: {

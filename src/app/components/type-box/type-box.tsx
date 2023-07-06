@@ -1,14 +1,15 @@
-import { capitalizeFirst } from "@/app/utils/capitalizeFirst";
-import { PokemonTypeType } from "@/app/types/PokemonTypeType";
+import { capitalizeFirst } from "@/app/utils/capitalize-first";
+import { PokemonTypeType } from "@/app/types/pokemon-type-type";
 
 type TypeBoxProps = {
   type: { type: { name: string; url: string } } | PokemonTypeType;
+  isButton?: boolean;
 };
 
-export const TypeBox = ({ type }: TypeBoxProps) => {
+const BaseTypeBox = ({ type }: TypeBoxProps) => {
   return (
     <div
-      className="flex h-full w-full items-center justify-center gap-1 rounded-lg px-2 py-1"
+      className="flex h-full w-full items-center justify-center gap-1 rounded-lg px-2 py-1 text-gray-200"
       style={{
         backgroundColor: `var(--${
           typeof type === "object" ? type.type.name : type
@@ -27,5 +28,19 @@ export const TypeBox = ({ type }: TypeBoxProps) => {
         {capitalizeFirst(typeof type === "object" ? type.type.name : type)}
       </span>
     </div>
+  );
+};
+
+export const TypeBox = ({ type, isButton }: TypeBoxProps) => {
+  return (
+    <>
+      {isButton ? (
+        <button className="w-full">
+          <BaseTypeBox type={type} />
+        </button>
+      ) : (
+        <BaseTypeBox type={type} />
+      )}
+    </>
   );
 };

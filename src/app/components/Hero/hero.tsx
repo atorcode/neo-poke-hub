@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { HeroDetails } from "../hero-details";
-import { PokedexEntryType } from "@/app/types/PokedexEntryType";
+import { PokedexEntryType } from "@/app/types/pokedex-entry-type";
 import { DividerGraphic } from "../divider-graphic";
 import { ParallaxWaves } from "../parallax-waves/parallax-waves";
 

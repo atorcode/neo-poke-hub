@@ -2,7 +2,7 @@ import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import { SearchBar } from "@/app/components/search-bar";
 import { mewData } from "../../mocks/mew-data";
-import { PokedexEntryType } from "@/app/types/PokedexEntryType";
+import { PokedexEntryType } from "@/app/types/pokedex-entry-type";
 
 const mockedPokedex: PokedexEntryType[] = [mewData];
 const mockedSetState = jest.fn();

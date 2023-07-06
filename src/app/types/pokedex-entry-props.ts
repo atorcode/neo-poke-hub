@@ -1,4 +1,4 @@
-import { PokedexEntryType } from "./PokedexEntryType";
+import { PokedexEntryType } from "./pokedex-entry-type";
 
 export type PokedexEntryProps = {
   entry: PokedexEntryType;

@@ -4,7 +4,7 @@ import { DividerGraphic } from "../divider-graphic";
 import { PokedexEntryDetailsModalPokemonSection } from "../pokedex-entry-details-modal-pokemon-section";
 import { PokemonStats } from "../pokemon-stats";
 import { InvisibleModalBackdrop } from "../invisible-modal-backdrop";
-import { PokedexEntryType } from "@/app/types/PokedexEntryType";
+import { PokedexEntryType } from "@/app/types/pokedex-entry-type";
 
 type PokedexEntryDetailsModalProps = {
   entry: PokedexEntryType;

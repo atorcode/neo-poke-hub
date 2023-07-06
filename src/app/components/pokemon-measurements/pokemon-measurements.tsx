@@ -1,6 +1,6 @@
 import { RxRulerSquare } from "react-icons/rx";
 import { IoScale } from "react-icons/io5";
-import { formatMeasurements } from "@/app/utils/formatMeasurements";
+import { formatMeasurements } from "@/app/utils/format-measurements";
 
 type PokemonMeasurementsProps = {
   height: number;

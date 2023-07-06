@@ -1,6 +1,6 @@
 import { Hero } from "./components/hero";
 import { NUMBER_OF_POKEMON } from "@/app/constants/constants";
-import { PokedexEntryType } from "./types/PokedexEntryType";
+import { PokedexEntryType } from "./types/pokedex-entry-type";
 import { DisplayedPokemon } from "./components/displayed-pokemon";
 
 const fetchData = async () => {

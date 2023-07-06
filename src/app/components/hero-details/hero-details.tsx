@@ -1,5 +1,5 @@
-import { addLeadingZeros } from "@/app/utils/addLeadingZeros";
-import { PokedexEntryType } from "@/app/types/PokedexEntryType";
+import { addLeadingZeros } from "@/app/utils/add-leading-zeros";
+import { PokedexEntryType } from "@/app/types/pokedex-entry-type";
 import { TypeBoxGroup } from "../type-box-group";
 import { PokemonStats } from "../pokemon-stats";
 import { PokemonMeasurements } from "../pokemon-measurements";
