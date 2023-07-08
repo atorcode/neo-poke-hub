@@ -13,7 +13,6 @@ export const SearchBar = ({ pokedex }: SearchBarProps) => {
   const [pokemonName, setPokemonName] = useState<string>("");
 
   const { setDisplayedPokemon } = useDisplayedPokemonContext();
-
   const filterPokemon = (name: string) => {
     const filteredPokemon = pokedex.filter((entry) => {
       return entry.name.toLowerCase().includes(name);

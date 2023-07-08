@@ -1,9 +1,14 @@
+"use client";
+
 import { capitalizeFirst } from "@/app/utils/capitalize-first";
 import { PokemonTypeType } from "@/app/types/pokemon-type-type";
+import { PokedexEntryType } from "@/app/types/pokedex-entry-type";
+import { useDisplayedPokemonContext } from "@/app/contexts/displayed-pokemon-context";
 
 type TypeBoxProps = {
   type: { type: { name: string; url: string } } | PokemonTypeType;
   isButton?: boolean;
+  pokedex?: PokedexEntryType[];
 };
 
 const BaseTypeBox = ({ type }: TypeBoxProps) => {
@@ -31,11 +36,30 @@ const BaseTypeBox = ({ type }: TypeBoxProps) => {
   );
 };
 
-export const TypeBox = ({ type, isButton }: TypeBoxProps) => {
+export const TypeBox = ({ type, isButton, pokedex }: TypeBoxProps) => {
+  const { setDisplayedPokemon } = useDisplayedPokemonContext();
+
+  const filterByType = (type: PokemonTypeType) => {
+    if (!pokedex) {
+      return null;
+    }
+    const filteredPokemon = pokedex.filter((entry) => {
+      // filtered types
+      const givenPokemonTypes = entry.types.map((type) => {
+        return type.type.name;
+      });
+      return givenPokemonTypes.includes(type);
+    });
+    setDisplayedPokemon(filteredPokemon);
+  };
+
   return (
     <>
       {isButton ? (
-        <button className="w-full">
+        <button
+          className="w-full"
+          onClick={() => filterByType(type as PokemonTypeType)}
+        >
           <BaseTypeBox type={type} />
         </button>
       ) : (

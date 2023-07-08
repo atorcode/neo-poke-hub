@@ -2,7 +2,6 @@
 
 import { SearchSection } from "../search-section";
 import { Pokedex } from "../pokedex";
-import { DisplayedPokemonProvider } from "@/app/contexts/displayed-pokemon-context";
 import { PokedexEntryType } from "@/app/types/pokedex-entry-type";
 
 type DisplayedPokemonProps = {
@@ -12,10 +11,8 @@ type DisplayedPokemonProps = {
 export const DisplayedPokemon = ({ pokedex }: DisplayedPokemonProps) => {
   return (
     <section>
-      <DisplayedPokemonProvider pokedex={pokedex}>
-        <SearchSection pokedex={pokedex} />
-        <Pokedex pokedex={pokedex} />
-      </DisplayedPokemonProvider>
+      <SearchSection pokedex={pokedex} />
+      <Pokedex pokedex={pokedex} />
     </section>
   );
 };

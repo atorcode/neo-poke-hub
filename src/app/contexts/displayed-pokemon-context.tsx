@@ -4,6 +4,7 @@ import { PokedexEntryType } from "../types/pokedex-entry-type";
 type DisplayedPokemonContextType = {
   displayedPokemon: PokedexEntryType[];
   setDisplayedPokemon: React.Dispatch<React.SetStateAction<PokedexEntryType[]>>;
+  pokedex: PokedexEntryType[];
 };
 
 const DisplayedPokemonContext = React.createContext<
@@ -22,7 +23,7 @@ const DisplayedPokemonProvider = ({
 
   return (
     <DisplayedPokemonContext.Provider
-      value={{ displayedPokemon, setDisplayedPokemon }}
+      value={{ displayedPokemon, setDisplayedPokemon, pokedex }}
     >
       {children}
     </DisplayedPokemonContext.Provider>

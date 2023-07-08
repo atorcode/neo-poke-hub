@@ -12,7 +12,12 @@ type SearchByTypeProps = {
 export const SearchByType = ({ pokedex }: SearchByTypeProps) => {
   return (
     <div>
-      <TypeBoxGroup types={types} layout="grid" isButton={true} />
+      <TypeBoxGroup
+        types={types}
+        layout="grid"
+        isButton={true}
+        pokedex={pokedex}
+      />
     </div>
   );
 };

@@ -3,6 +3,7 @@
 import { PokedexEntryType } from "@/app/types/pokedex-entry-type";
 import { PokedexEntry } from "../pokedex-entry";
 import { useState } from "react";
+import { useDisplayedPokemonContext } from "@/app/contexts/displayed-pokemon-context";
 
 type PokedexProps = {
   pokedex: PokedexEntryType[];
@@ -10,6 +11,7 @@ type PokedexProps = {
 
 export const Pokedex = ({ pokedex }: PokedexProps) => {
   const [expandedModal, setExpandedModal] = useState<number>(-1);
+  const { displayedPokemon } = useDisplayedPokemonContext();
   return (
     <section
       className="flex items-center justify-center"
@@ -23,7 +25,7 @@ export const Pokedex = ({ pokedex }: PokedexProps) => {
           backgroundColor: "#101114",
         }}
       >
-        {pokedex.map((entry) => {
+        {displayedPokemon.map((entry) => {
           return (
             <PokedexEntry
               key={entry.id}
