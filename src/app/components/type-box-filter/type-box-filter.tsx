@@ -51,9 +51,9 @@ export const TypeBoxFilter = ({
       <div
         className="flex h-full w-full items-center justify-center gap-1 rounded-lg px-2 py-1 text-gray-200"
         style={{
-          backgroundColor: `var(--${
-            typeof type === "object" ? type.type.name : type
-          }-type)`,
+          backgroundColor: selectedButtons[index]
+            ? "red"
+            : `var(--${typeof type === "object" ? type.type.name : type}-type)`,
         }}
       >
         <img
