@@ -1,4 +1,4 @@
-import { TypeBoxGroup } from "../type-box-group";
+import { TypeBoxFilterGroup } from "../type-box-filter-group";
 import { POKEMON_TYPES } from "@/app/constants/constants";
 import { PokemonTypeType } from "@/app/types/pokemon-type-type";
 import { PokedexEntryType } from "@/app/types/pokedex-entry-type";
@@ -10,14 +10,5 @@ type SearchByTypeProps = {
 };
 
 export const SearchByType = ({ pokedex }: SearchByTypeProps) => {
-  return (
-    <div>
-      <TypeBoxGroup
-        types={types}
-        layout="grid"
-        isButton={true}
-        pokedex={pokedex}
-      />
-    </div>
-  );
+  return <TypeBoxFilterGroup types={types} pokedex={pokedex} />;
 };

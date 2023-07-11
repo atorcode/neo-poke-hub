@@ -5,12 +5,10 @@ import { mewData } from "../../mocks/mew-data";
 import { PokedexEntryType } from "@/app/types/pokedex-entry-type";
 
 const mockedPokedex: PokedexEntryType[] = [mewData];
-const mockedSetState = jest.fn();
+
 describe("SearchBar", () => {
   it("renders properly", () => {
-    render(
-      <SearchBar pokedex={mockedPokedex} setDisplayedPokemon={mockedSetState} />
-    );
+    render(<SearchBar pokedex={mockedPokedex} />);
     const inputElement = screen.getByRole("textbox");
     expect(inputElement).toBeInTheDocument();
   });

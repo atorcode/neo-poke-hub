@@ -13,7 +13,7 @@ const testTypes2: PokemonTypeType[] = ["psychic"];
 
 describe("TypeBoxGroup", () => {
   it("renders properly with test object and grid", () => {
-    render(<TypeBoxGroup types={testTypes1} layout="grid" />);
+    render(<TypeBoxGroup types={testTypes1} />);
     const ulElement = screen.getByRole("list");
     expect(ulElement).toHaveClass("grid");
   });
