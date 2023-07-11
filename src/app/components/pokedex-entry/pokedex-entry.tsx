@@ -13,7 +13,7 @@ export const PokedexEntry = ({
 }: PokedexEntryProps) => {
   return (
     <article
-      className="relative h-96 rounded-3xl"
+      className="relative h-96 w-full rounded-3xl"
       style={{
         maxWidth: "20rem",
         minWidth: "16rem",
