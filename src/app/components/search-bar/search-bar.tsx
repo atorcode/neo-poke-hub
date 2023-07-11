@@ -3,6 +3,7 @@
 import { BsSearch } from "react-icons/bs";
 import { useState } from "react";
 import { PokedexEntryType } from "@/app/types/pokedex-entry-type";
+import styles from "./search-bar.module.css";
 import { useDisplayedPokemonContext } from "@/app/contexts/displayed-pokemon-context";
 
 type SearchBarProps = {
@@ -22,11 +23,7 @@ export const SearchBar = ({ pokedex }: SearchBarProps) => {
 
   return (
     <div
-      className="relative h-12 w-2/6 rounded-md border-2 bg-gray-200"
-      style={{
-        minWidth: "714px",
-        backgroundColor: "transparent",
-      }}
+      className={`${styles["search-bar"]} relative h-12 rounded-md border-2 bg-gray-200`}
     >
       <BsSearch
         className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-200"

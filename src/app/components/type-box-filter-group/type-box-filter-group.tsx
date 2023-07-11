@@ -20,7 +20,11 @@ export const TypeBoxFilterGroup = ({
     Array(18).fill(false)
   );
   return (
-    <ul className={"grid grid-cols-6 gap-3"}>
+    <ul
+      className={
+        "grid grid-cols-3 gap-3 px-2 text-sm sm:px-0 sm:text-base md:grid-cols-6"
+      }
+    >
       {types.map((type, index) => {
         return (
           <li key={index} className="flex items-center justify-center">
