@@ -22,6 +22,8 @@ export const TypeBoxFilter = ({
 }: TypeBoxFilterProps) => {
   const { setDisplayedPokemon } = useDisplayedPokemonContext();
 
+  console.log(selectedButtons);
+
   const filterByType = (type: PokemonTypeType) => {
     if (!pokedex) {
       return null;
@@ -41,19 +43,25 @@ export const TypeBoxFilter = ({
       className="w-full"
       onClick={() => {
         setSelectedButtons &&
-          index &&
+          index !== undefined &&
           setSelectedButtons((prev) => {
-            return [...prev, (prev[index] = true)];
+            const updatedArray = prev.map((_button, buttonIndex) => {
+              return index === buttonIndex ? true : false;
+            });
+            return updatedArray;
           });
         filterByType(type as PokemonTypeType);
       }}
     >
       <div
-        className="flex h-full w-full items-center justify-center gap-1 rounded-lg px-2 py-1 text-gray-100"
+        className="box-border flex h-full w-full items-center justify-center gap-1 rounded-lg px-2 py-1 text-gray-100"
         style={{
-          backgroundColor: selectedButtons[index]
-            ? "red"
-            : `var(--${typeof type === "object" ? type.type.name : type}-type)`,
+          backgroundColor: `var(--${
+            typeof type === "object" ? type.type.name : type
+          }-type)`,
+          border: selectedButtons[index]
+            ? "2px solid rgb(243, 244, 246)"
+            : "2px solid transparent",
         }}
       >
         <img
