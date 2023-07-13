@@ -10,8 +10,8 @@ type HeroProps = PokedexEntryType;
 export const Hero = (pokedexEntry: HeroProps) => {
   return (
     <article
-      className={`${styles["hero"]} relative flex min-h-screen items-center justify-center overflow-hidden`}
-      style={{ backgroundColor: "#000565" }}
+      className={`${styles["hero"]} relative flex items-center justify-center overflow-hidden`}
+      style={{ backgroundColor: "#000565", minHeight: "900px" }}
     >
       <Image
         src="/Pokemon_Logo.svg"
