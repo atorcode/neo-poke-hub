@@ -2,7 +2,10 @@ import { ExternalLinkIconGroup } from "../external-link-icon-group";
 
 export const NavBar = () => {
   return (
-    <nav className="absolute z-50 flex w-full justify-center text-gray-100">
+    <nav
+      className="relative flex w-full justify-center text-gray-100"
+      style={{ backgroundColor: "#000565" }}
+    >
       <div className="z-50 flex h-28 w-11/12 items-center justify-between sm:h-32 sm:w-10/12 md:h-36">
         <div className="flex items-center gap-1 sm:gap-4 md:gap-6">
           <img

@@ -18,7 +18,7 @@ export const StatBar = ({ value }: StatBarProps) => {
       ? "rgb(255, 32, 32)"
       : "rgb(0, 192, 0)";
   return (
-    <div className="h-3 w-80 overflow-hidden rounded-md bg-slate-600">
+    <div className="h-3 w-36 overflow-hidden rounded-md bg-slate-600 md:w-80">
       <div
         className="h-3 transition-all duration-1000"
         style={{

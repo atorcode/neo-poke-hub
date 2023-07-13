@@ -1,4 +1,5 @@
 "use client";
+import styles from "./pokedex-entry-details-modal.module.css";
 import { RiCloseCircleLine } from "react-icons/ri";
 import { DividerGraphic } from "../divider-graphic";
 import { PokedexEntryDetailsModalPokemonSection } from "../pokedex-entry-details-modal-pokemon-section";
@@ -18,7 +19,7 @@ export const PokedexEntryDetailsModal = ({
   return (
     <div className="fixed left-0 top-0 z-50 h-full w-full">
       <article
-        className="fixed left-1/2 top-1/2 z-50 flex h-96 -translate-x-1/2 -translate-y-1/2 justify-start gap-32 rounded-3xl text-gray-100"
+        className={`${styles["modal"]} fixed left-1/2 top-1/2 z-50 flex h-96 -translate-x-1/2 -translate-y-1/2 justify-start gap-32 rounded-3xl text-gray-100`}
         style={{
           width: "60rem",
           background: "linear-gradient(45deg, #00011a 0%, #220000 100%)",
@@ -27,11 +28,10 @@ export const PokedexEntryDetailsModal = ({
       >
         <PokedexEntryDetailsModalPokemonSection {...entry} />
         <DividerGraphic
-          size="5rem"
-          dividerLength="7rem"
           gap="3"
           left="318px"
           zIndex="50"
+          isHeroGraphic={false}
         />
         <PokemonStats stats={entry.stats} gap="4" zIndex="50" />
         <button

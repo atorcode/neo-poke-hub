@@ -22,8 +22,6 @@ export const TypeBoxFilter = ({
 }: TypeBoxFilterProps) => {
   const { setDisplayedPokemon } = useDisplayedPokemonContext();
 
-  console.log(selectedButtons);
-
   const filterByType = (type: PokemonTypeType) => {
     if (!pokedex) {
       return null;
@@ -46,11 +44,15 @@ export const TypeBoxFilter = ({
           index !== undefined &&
           setSelectedButtons((prev) => {
             const updatedArray = prev.map((_button, buttonIndex) => {
-              return index === buttonIndex ? true : false;
+              return index === buttonIndex ? !prev[index] : false;
             });
             return updatedArray;
           });
-        filterByType(type as PokemonTypeType);
+        if (selectedButtons[index]) {
+          setDisplayedPokemon(pokedex);
+        } else {
+          filterByType(type as PokemonTypeType);
+        }
       }}
     >
       <div

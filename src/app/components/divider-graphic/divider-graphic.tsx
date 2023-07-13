@@ -7,21 +7,40 @@ type DividerGraphicProps = {
   gap: string;
   left?: string;
   zIndex: string;
+  isHeroGraphic: boolean;
 };
 
-export const DividerGraphic = ({ gap, left, zIndex }: DividerGraphicProps) => {
+export const DividerGraphic = ({
+  gap,
+  left,
+  zIndex,
+  isHeroGraphic,
+}: DividerGraphicProps) => {
   return (
     <div
-      className={`${styles["divider-group"]} absolute z-${zIndex} h-full gap-${gap} text-gray-100`}
+      className={`${
+        isHeroGraphic ? styles["divider-group-hero"] : styles["divider-group"]
+      } absolute z-${zIndex} h-full gap-${gap} text-gray-100`}
       style={{ left: `${left}` }}
     >
-      <div className={styles["first-divider"]} data-testid="divider-top"></div>
+      <div
+        className={
+          isHeroGraphic ? styles["first-divider-hero"] : styles["first-divider"]
+        }
+        data-testid="divider-top"
+      ></div>
       <CgPokemon
-        className={styles["divider-icon"]}
+        className={
+          isHeroGraphic ? styles["divider-icon-hero"] : styles["divider-icon"]
+        }
         data-testid="divider-logo"
       />
       <div
-        className={styles["second-divider"]}
+        className={
+          isHeroGraphic
+            ? styles["second-divider-hero"]
+            : styles["second-divider"]
+        }
         data-testid="divider-bottom"
       ></div>
     </div>

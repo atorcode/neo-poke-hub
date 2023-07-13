@@ -2,6 +2,7 @@
   flex-direction: column;
   justify-content: end;
   gap: 5rem;
+  margin-top: 0;
 }
 
 .hero-image {
@@ -15,11 +16,26 @@
   .hero {
     flex-direction: row;
     justify-content: center;
-    padding-top: 0;
     gap: 0;
   }
   .hero-image {
     height: 480px;
     width: 480px;
+  }
+}
+
+@media (min-width: 1180px) and (min-height: 916px) {
+  .hero {
+    margin-top: -8.5rem;
+  }
+}
+
+@media min-width: 1180px) and (min-height: {
+  .hero {
+    margin-top: -5rem;
+  }
+  .image-container {
+    padding-top: 3rem;
+    margin-bottom: -10rem;
   }
 }

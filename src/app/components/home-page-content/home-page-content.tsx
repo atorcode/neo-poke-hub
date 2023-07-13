@@ -12,7 +12,7 @@ export const HomePageContent = ({ pokedex }: HomePageContent) => {
     <main>
       <DisplayedPokemonProvider pokedex={pokedex}>
         <div
-          className="relative h-screen overflow-x-hidden"
+          className="relative overflow-hidden"
           style={{ backgroundColor: "#101114" }}
         >
           <Hero {...pokedex[0]} />

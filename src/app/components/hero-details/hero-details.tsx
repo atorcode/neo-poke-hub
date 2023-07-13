@@ -29,7 +29,9 @@ export const HeroDetails = ({
       <section className="flex w-3/6 flex-col items-center text-gray-100">
         <div className="flex flex-col gap-3">
           <h3 className="text-xl">#{addLeadingZeros(id)}</h3>
-          <h2 className="text-7xl font-bold">{name.toUpperCase()}</h2>
+          <h2 className="text-5xl font-bold sm:text-7xl">
+            {name.toUpperCase()}
+          </h2>
           <TypeBoxGroup types={types} />
           <PokemonStats stats={stats} zIndex="10" justify="start" />
           <PokemonMeasurements height={height} weight={weight} />

@@ -10,7 +10,7 @@ type HeroProps = PokedexEntryType;
 export const Hero = (pokedexEntry: HeroProps) => {
   return (
     <article
-      className={`${styles["hero"]} flex h-screen items-center justify-center overflow-y-hidden`}
+      className={`${styles["hero"]} relative flex min-h-screen items-center justify-center overflow-hidden`}
       style={{ backgroundColor: "#000565" }}
     >
       <Image
@@ -23,8 +23,10 @@ export const Hero = (pokedexEntry: HeroProps) => {
         style={{ width: "30vw", maxWidth: "400px" }}
       />
       <HeroDetails {...pokedexEntry} />
-      <DividerGraphic gap="6" zIndex="10" />
-      <div className="z-10 flex w-3/6 items-center justify-center">
+      <DividerGraphic gap="6" zIndex="10" isHeroGraphic={true} />
+      <div
+        className={`${styles["image-container"]} z-10 flex w-3/6 items-center justify-center`}
+      >
         <img
           className={styles["hero-image"]}
           src="/sobble.gif"

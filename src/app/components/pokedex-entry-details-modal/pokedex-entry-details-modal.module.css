@@ -1,0 +1,9 @@
+.modal {
+  height: 48rem;
+}
+
+@media (max-width: 1180px) {
+  .modal {
+    height: 48rem;
+  }
+}
