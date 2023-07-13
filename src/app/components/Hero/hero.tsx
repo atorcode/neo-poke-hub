@@ -3,13 +3,14 @@ import { HeroDetails } from "../hero-details";
 import { PokedexEntryType } from "@/app/types/pokedex-entry-type";
 import { DividerGraphic } from "../divider-graphic";
 import { ParallaxWaves } from "../parallax-waves/parallax-waves";
+import styles from "./hero.module.css";
 
 type HeroProps = PokedexEntryType;
 
 export const Hero = (pokedexEntry: HeroProps) => {
   return (
     <article
-      className="relative flex h-screen flex-col items-center justify-center pt-52 lg:flex-row lg:pt-0"
+      className={`${styles["hero"]} flex h-screen items-center justify-center overflow-y-hidden`}
       style={{ backgroundColor: "#000565" }}
     >
       <Image
@@ -22,12 +23,12 @@ export const Hero = (pokedexEntry: HeroProps) => {
         style={{ width: "30vw", maxWidth: "400px" }}
       />
       <HeroDetails {...pokedexEntry} />
-      <DividerGraphic size="7rem" dividerLength="13rem" gap="6" zIndex="10" />
+      <DividerGraphic gap="6" zIndex="10" />
       <div className="z-10 flex w-3/6 items-center justify-center">
         <img
+          className={styles["hero-image"]}
           src="/sobble.gif"
           alt="Sobble smiles and blinks while swaying side to side"
-          style={{ minHeight: "480px", minWidth: "480px" }}
         />
       </div>
       <ParallaxWaves />

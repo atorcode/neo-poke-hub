@@ -1,0 +1,45 @@
+.divider-group {
+  padding-top: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.divider-icon {
+  font-size: 4rem;
+}
+
+.first-divider {
+  width: 13rem;
+  height: 1px;
+  background: linear-gradient(to right, rgb(255, 255, 255, 0), white);
+}
+
+.second-divider {
+  width: 13rem;
+  height: 1px;
+  background: linear-gradient(to left, rgb(255, 255, 255, 0), white);
+}
+
+@media (min-width: 1180px) {
+  .divider-group {
+    flex-direction: column;
+    padding-top: 0;
+  }
+
+  .divider-icon {
+    font-size: 7rem;
+  }
+
+  .first-divider {
+    width: 1px;
+    height: 13rem;
+    background: linear-gradient(rgb(255, 255, 255, 0), white);
+  }
+
+  .second-divider {
+    width: 1px;
+    height: 13rem;
+    background: linear-gradient(white, rgb(255, 255, 255, 0));
+  }
+}
