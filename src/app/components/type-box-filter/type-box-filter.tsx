@@ -49,7 +49,7 @@ export const TypeBoxFilter = ({
       }}
     >
       <div
-        className="flex h-full w-full items-center justify-center gap-1 rounded-lg px-2 py-1 text-gray-200"
+        className="flex h-full w-full items-center justify-center gap-1 rounded-lg px-2 py-1 text-gray-100"
         style={{
           backgroundColor: selectedButtons[index]
             ? "red"

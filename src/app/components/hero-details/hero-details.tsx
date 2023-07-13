@@ -3,16 +3,16 @@ import { PokedexEntryType } from "@/app/types/pokedex-entry-type";
 import { TypeBoxGroup } from "../type-box-group";
 import { PokemonStats } from "../pokemon-stats";
 import { PokemonMeasurements } from "../pokemon-measurements";
-import { StatType } from "@/app/types/StatType";
+// import { StatType } from "@/app/types/StatType";
 
-type StatsInfoType = {
-  base_stat: number;
-  effort: number;
-  stat: {
-    name: StatType;
-    url: string;
-  };
-};
+// type StatsInfoType = {
+//   base_stat: number;
+//   effort: number;
+//   stat: {
+//     name: StatType;
+//     url: string;
+//   };
+// };
 
 type HeroDetailsProps = PokedexEntryType;
 
@@ -26,7 +26,7 @@ export const HeroDetails = ({
 }: HeroDetailsProps) => {
   return (
     <>
-      <section className="flex w-3/6 flex-col items-center text-white">
+      <section className="flex w-3/6 flex-col items-center text-gray-100">
         <div className="flex flex-col gap-3">
           <h3 className="text-xl">#{addLeadingZeros(id)}</h3>
           <h2 className="text-7xl font-bold">{name.toUpperCase()}</h2>

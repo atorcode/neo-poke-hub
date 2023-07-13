@@ -18,7 +18,7 @@ export const PokedexEntryDetailsModal = ({
   return (
     <div className="fixed left-0 top-0 z-50 h-full w-full">
       <article
-        className="fixed left-1/2 top-1/2 z-50 flex h-96 -translate-x-1/2 -translate-y-1/2 justify-start gap-32 rounded-3xl text-white"
+        className="fixed left-1/2 top-1/2 z-50 flex h-96 -translate-x-1/2 -translate-y-1/2 justify-start gap-32 rounded-3xl text-gray-100"
         style={{
           width: "60rem",
           background: "linear-gradient(45deg, #00011a 0%, #220000 100%)",

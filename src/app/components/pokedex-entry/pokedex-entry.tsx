@@ -37,7 +37,7 @@ export const PokedexEntry = ({
           setExpandedModal={setExpandedModal}
           type={entry.types[0].type.name}
         />
-        <div className="relative flex flex-col items-center justify-center gap-1 px-5 text-white">
+        <div className="relative flex flex-col items-center justify-center gap-1 px-5 text-gray-100">
           <h3 className="text-lg font-bold">#{addLeadingZeros(entry.id)}</h3>
           <h2 className="mb-2 text-3xl font-bold">
             {entry.name.toUpperCase()}

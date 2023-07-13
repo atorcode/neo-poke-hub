@@ -3,7 +3,7 @@ import { ExternalLinkIconGroup } from "../external-link-icon-group";
 export const Footer = () => {
   return (
     <section
-      className="flex h-24 w-10/12 items-start justify-between gap-4 text-xs text-gray-200 sm:gap-10 lg:text-sm"
+      className="flex h-24 w-10/12 items-start justify-between gap-4 text-xs text-gray-100 sm:gap-10 lg:text-sm"
       style={{
         backgroundColor: "#101114",
         borderTop: "1px solid #9fa0a1",

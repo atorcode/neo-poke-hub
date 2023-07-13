@@ -9,7 +9,7 @@ type HeroProps = PokedexEntryType;
 export const Hero = (pokedexEntry: HeroProps) => {
   return (
     <article
-      className="relative flex h-screen items-center justify-center"
+      className="relative flex h-screen flex-col items-center justify-center pt-52 lg:flex-row lg:pt-0"
       style={{ backgroundColor: "#000565" }}
     >
       <Image
@@ -27,6 +27,7 @@ export const Hero = (pokedexEntry: HeroProps) => {
         <img
           src="/sobble.gif"
           alt="Sobble smiles and blinks while swaying side to side"
+          style={{ minHeight: "480px", minWidth: "480px" }}
         />
       </div>
       <ParallaxWaves />

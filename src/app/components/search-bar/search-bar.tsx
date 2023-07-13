@@ -26,13 +26,13 @@ export const SearchBar = ({ pokedex }: SearchBarProps) => {
       className={`${styles["search-bar"]} relative h-12 rounded-md border-2 bg-gray-200`}
     >
       <BsSearch
-        className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-200"
+        className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-100"
         style={{ backgroundColor: "transparent" }}
       />
       <input
         type="text"
         placeholder="Search for a Pokemon"
-        className="absolute left-12 h-full w-10/12 bg-gray-200 text-gray-200 outline-none placeholder:text-gray-400"
+        className="absolute left-12 h-full w-10/12 bg-gray-200 text-gray-100 outline-none placeholder:text-gray-400"
         style={{ backgroundColor: "transparent" }}
         value={pokemonName}
         onChange={(e) => {
