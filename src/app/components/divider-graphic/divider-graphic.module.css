@@ -1,8 +1,8 @@
 .divider-group {
-  /*padding-top: 10rem; */
   display: flex;
   justify-content: center;
   align-items: center;
+  transform: translateY(-2.3rem);
 }
 
 .divider-icon {
@@ -10,13 +10,13 @@
 }
 
 .first-divider {
-  width: 13rem;
+  width: 20rem;
   height: 1px;
   background: linear-gradient(to right, rgb(255, 255, 255, 0), white);
 }
 
 .second-divider {
-  width: 13rem;
+  width: 20rem;
   height: 1px;
   background: linear-gradient(to left, rgb(255, 255, 255, 0), white);
 }
@@ -44,7 +44,32 @@
   background: linear-gradient(to left, rgb(255, 255, 255, 0), white);
 }
 
-@media (min-width: 1180px) {
+@media (min-width: 1181px) {
+  .divider-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    left: 318px;
+    transform: translateY(0);
+  }
+
+  .divider-icon {
+    font-size: 4rem;
+  }
+
+  .first-divider {
+    width: 1px;
+    height: 8rem;
+    background: linear-gradient(rgb(255, 255, 255, 0), white);
+  }
+
+  .second-divider {
+    width: 1px;
+    height: 8rem;
+    background: linear-gradient(white, rgb(255, 255, 255, 0));
+  }
+
   .divider-group-hero {
     flex-direction: column;
     padding-top: 0;

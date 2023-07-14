@@ -27,7 +27,7 @@ export const Pokedex = ({ pokedex }: PokedexProps) => {
       >
         {displayedPokemon.map((entry) => {
           return (
-            <div className="flex items-center justify-center" key={entry.id}>
+            <div className="flex items-start justify-center" key={entry.id}>
               <PokedexEntry
                 expandedModal={expandedModal}
                 setExpandedModal={setExpandedModal}

@@ -7,7 +7,7 @@ type TypeBoxProps = {
 export const TypeBox = ({ type }: TypeBoxProps) => {
   return (
     <div
-      className="flex h-full w-full items-center justify-center gap-1 rounded-lg px-2 py-1"
+      className="flex h-full w-full items-center justify-center gap-1 rounded-lg px-2 py-1 font-bold text-white"
       style={{ backgroundColor: `var(--${type.type.name}-type)` }}
     >
       <img

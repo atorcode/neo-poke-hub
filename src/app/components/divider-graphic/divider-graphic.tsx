@@ -21,7 +21,6 @@ export const DividerGraphic = ({
       className={`${
         isHeroGraphic ? styles["divider-group-hero"] : styles["divider-group"]
       } absolute z-${zIndex} h-full gap-${gap} text-gray-100`}
-      style={{ left: `${left}` }}
     >
       <div
         className={

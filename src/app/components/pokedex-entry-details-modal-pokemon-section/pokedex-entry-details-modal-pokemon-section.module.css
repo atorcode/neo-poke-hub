@@ -1,0 +1,6 @@
+@media (max-width: 1180px) {
+  .image {
+    left: 50%;
+    transform: translate(-50%, 3.5rem);
+  }
+}

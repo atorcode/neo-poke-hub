@@ -1,9 +1,14 @@
 .modal {
-  height: 48rem;
+  height: 24rem;
+  width: 60rem;
 }
 
 @media (max-width: 1180px) {
   .modal {
     height: 48rem;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 6rem;
+    width: 98%;
   }
 }

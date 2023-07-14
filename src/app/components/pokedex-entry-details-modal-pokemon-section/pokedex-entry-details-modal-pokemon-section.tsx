@@ -1,3 +1,4 @@
+import styles from "./pokedex-entry-details-modal-pokemon-section.module.css";
 import { PokemonMeasurements } from "../pokemon-measurements";
 import { TypeBoxGroup } from "../type-box-group";
 import { addLeadingZeros } from "@/app/utils/add-leading-zeros";
@@ -9,7 +10,7 @@ export const PokedexEntryDetailsModalPokemonSection = (
   entry: PokedexEntryDetailsModalPokemonSectionProps
 ) => {
   return (
-    <section className="z-50 flex h-full items-start">
+    <section className="z-50 flex h-96 items-start">
       <div
         className="relative flex flex-col items-center justify-center gap-2 overflow-hidden px-5 pt-4 font-bold"
         style={{ width: "318px" }}
@@ -19,7 +20,9 @@ export const PokedexEntryDetailsModalPokemonSection = (
         <TypeBoxGroup types={entry.types} />
         <PokemonMeasurements height={entry.height} weight={entry.weight} />
       </div>
-      <div className="absolute bottom-0 left-0 w-64 translate-x-8 translate-y-14">
+      <div
+        className={`${styles["image"]} absolute bottom-0 left-0 w-64 translate-x-8 translate-y-14`}
+      >
         <img src={entry.sprites.other.home.front_default} alt={entry.name} />
       </div>
     </section>

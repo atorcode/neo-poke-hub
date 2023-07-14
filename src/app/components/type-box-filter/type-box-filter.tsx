@@ -56,7 +56,7 @@ export const TypeBoxFilter = ({
       }}
     >
       <div
-        className="box-border flex h-full w-full items-center justify-center gap-1 rounded-lg px-2 py-1 text-gray-100"
+        className="box-border flex h-full w-full items-center justify-center gap-1 overflow-hidden rounded-lg px-2 py-1 font-bold text-white"
         style={{
           backgroundColor: `var(--${
             typeof type === "object" ? type.type.name : type
