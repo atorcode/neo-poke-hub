@@ -5,12 +5,10 @@ import { TypeBoxGroup } from "../type-box-group";
 import { addLeadingZeros } from "@/app/utils/add-leading-zeros";
 import { PokedexEntryDetailsModal } from "../pokedex-entry-details-modal";
 import { PokedexEntryProps } from "@/app/types/pokedex-entry-props";
+import { useExpandedModalContext } from "@/app/contexts/expanded-modal-context";
 
-export const PokedexEntry = ({
-  entry,
-  expandedModal,
-  setExpandedModal,
-}: PokedexEntryProps) => {
+export const PokedexEntry = ({ entry }: PokedexEntryProps) => {
+  const { expandedModal } = useExpandedModalContext();
   return (
     <article
       className="relative h-96 w-full rounded-3xl"
@@ -32,11 +30,7 @@ export const PokedexEntry = ({
             }}
           ></div>
         </div>
-        <ExpandButton
-          id={entry.id}
-          setExpandedModal={setExpandedModal}
-          type={entry.types[0].type.name}
-        />
+        <ExpandButton id={entry.id} type={entry.types[0].type.name} />
         <div className="relative flex flex-col items-center justify-center gap-1 px-5 text-gray-100">
           <h3 className="text-lg font-bold">#{addLeadingZeros(entry.id)}</h3>
           <h2 className="mb-2 text-3xl font-bold">
@@ -48,12 +42,7 @@ export const PokedexEntry = ({
       <div className="absolute bottom-0 left-1/2 w-64 -translate-x-1/2 translate-y-14">
         <img src={entry.sprites.other.home.front_default} alt={entry.name} />
       </div>
-      {expandedModal === entry.id && (
-        <PokedexEntryDetailsModal
-          entry={entry}
-          setExpandedModal={setExpandedModal}
-        />
-      )}
+      {expandedModal === entry.id && <PokedexEntryDetailsModal entry={entry} />}
     </article>
   );
 };

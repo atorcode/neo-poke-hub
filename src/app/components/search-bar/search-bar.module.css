@@ -1,19 +1,19 @@
 .search-bar {
   background-color: transparent;
   width: 95%;
-  max-width: 338px;
+  max-width: 347px;
 }
 
 @media (min-width: 640px) {
   .search-bar {
-    width: 363px;
-    max-width: 363px;
+    width: 373px;
+    max-width: 373px;
   }
 }
 
 @media (min-width: 768px) {
   .search-bar {
-    width: 738px;
-    max-width: 738px;
+    width: 758px;
+    max-width: 758px;
   }
 }

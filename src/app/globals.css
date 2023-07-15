@@ -31,6 +31,10 @@
   box-sizing: border-box;
 }
 
+body {
+  overflow-x: hidden !important;
+}
+
 :link {
   text-decoration: none;
 }

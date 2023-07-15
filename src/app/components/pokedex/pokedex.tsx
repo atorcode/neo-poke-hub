@@ -10,11 +10,11 @@ type PokedexProps = {
 };
 
 export const Pokedex = ({ pokedex }: PokedexProps) => {
-  const [expandedModal, setExpandedModal] = useState<number>(-1);
   const { displayedPokemon } = useDisplayedPokemonContext();
+
   return (
     <section
-      className="flex items-center justify-center"
+      className="flex items-center justify-center overflow-x-hidden"
       style={{ backgroundColor: "#101114" }}
     >
       <article
@@ -28,11 +28,7 @@ export const Pokedex = ({ pokedex }: PokedexProps) => {
         {displayedPokemon.map((entry) => {
           return (
             <div className="flex items-start justify-center" key={entry.id}>
-              <PokedexEntry
-                expandedModal={expandedModal}
-                setExpandedModal={setExpandedModal}
-                entry={entry}
-              />
+              <PokedexEntry entry={entry} />
             </div>
           );
         })}

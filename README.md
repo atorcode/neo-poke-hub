@@ -14,6 +14,7 @@ NeoPokeHub provides an elegantly streamlined experience for trainers in search o
 
 - Add Who's that Pokemon minigame
 - Break components down further and organize tests better
+- Clean up code
 - Improve animations
 
 ## Languages and Technologies

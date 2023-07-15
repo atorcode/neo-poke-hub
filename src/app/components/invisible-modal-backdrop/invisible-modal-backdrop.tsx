@@ -8,7 +8,7 @@ export const InvisibleModalBackdrop = ({
 }: InvisibleModalBackdropProps) => {
   return (
     <div
-      className="left-0 top-0 z-50 h-full w-full overflow-hidden"
+      className="fixed left-0 top-0 z-0 h-full w-full overflow-hidden"
       style={{ backgroundColor: "rgba(0, 0, 0, 0.75)" }}
       data-testid="modal-backdrop"
       onClick={() => {

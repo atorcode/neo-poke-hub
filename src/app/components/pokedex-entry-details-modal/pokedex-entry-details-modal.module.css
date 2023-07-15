@@ -3,6 +3,10 @@
   width: 60rem;
 }
 
+.scroll-backdrop {
+  overflow-y: scroll;
+}
+
 @media (max-width: 1180px) {
   .modal {
     height: 48rem;
@@ -10,5 +14,9 @@
     align-items: center;
     gap: 6rem;
     width: 98%;
+  }
+
+  .scroll-backdrop {
+    overflow: auto;
   }
 }
