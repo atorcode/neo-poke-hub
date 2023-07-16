@@ -1,6 +1,9 @@
 .modal {
   height: 24rem;
   width: 60rem;
+  top: 0.5rem;
+  left: 50%;
+  transform: translate(-50%, 50%);
 }
 
 .scroll-backdrop {
@@ -14,9 +17,15 @@
     align-items: center;
     gap: 6rem;
     width: 98%;
+    top: 50%;
+    transform: translate(-50%, -50%);
   }
+}
 
-  .scroll-backdrop {
-    overflow: auto;
+@media (max-height: 792px) {
+  .modal {
+    top: 0.5rem;
+    left: 50%;
+    transform: translate(-50%, 0);
   }
 }

@@ -28,10 +28,10 @@ export const PokedexEntryDetailsModal = ({
   return (
     <>
       <div
-        className={`${styles["scroll-backdrop"]} fixed left-0 top-0 z-50 flex h-full min-h-screen w-screen items-center justify-center`}
+        className={`${styles["scroll-backdrop"]} fixed left-0 top-0 z-50 h-full min-h-screen w-screen `}
       >
         <article
-          className={`${styles["modal"]} relative z-50 flex h-96 justify-start gap-32 rounded-3xl text-gray-100`}
+          className={`${styles["modal"]} absolute z-50 flex h-96 justify-start gap-32 rounded-3xl text-gray-100`}
           style={{
             background: "linear-gradient(45deg, #00011a 0%, #220000 100%)",
             border: "1px solid rgb(35, 40, 60)",
