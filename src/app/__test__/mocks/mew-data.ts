@@ -1,4 +1,4 @@
-import { StatType } from "@/app/types/StatType";
+import { StatType } from "@/app/types/stat-type";
 
 export const mewData = {
   id: 151,

@@ -1,4 +1,4 @@
-import { StatType } from "../types/StatType";
+import { StatType } from "../types/stat-type";
 
 export const formatStatName = (stat: StatType) => {
   switch (stat) {

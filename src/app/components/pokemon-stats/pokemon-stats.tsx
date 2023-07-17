@@ -1,4 +1,4 @@
-import { StatType } from "@/app/types/StatType";
+import { StatType } from "@/app/types/stat-type";
 import { StatBar } from "../stat-bar";
 import { formatStatName } from "@/app/utils/format-stat-name";
 

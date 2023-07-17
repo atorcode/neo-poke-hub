@@ -3,7 +3,6 @@ import { PokedexEntryType } from "@/app/types/pokedex-entry-type";
 import { TypeBoxGroup } from "../type-box-group";
 import { PokemonStats } from "../pokemon-stats";
 import { PokemonMeasurements } from "../pokemon-measurements";
-// import { StatType } from "@/app/types/StatType";
 
 // type StatsInfoType = {
 //   base_stat: number;

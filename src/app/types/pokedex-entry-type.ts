@@ -1,4 +1,4 @@
-import { StatType } from "./StatType";
+import { StatType } from "./stat-type";
 
 export type PokedexEntryType = {
   id: number;
