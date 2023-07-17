@@ -31,6 +31,10 @@ NeoPokeHub provides an elegantly streamlined experience for trainers in search o
 - Test-driven Development with unit tests
 - Server-side Rendering
 
+## Attribution
+
+This design was heavily inspired by https://github.com/carlosdancr
+
 ## License
 
 Licensed under the [MIT License](LICENSE)
