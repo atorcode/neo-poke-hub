@@ -2,7 +2,6 @@
 
 import { PokedexEntryType } from "@/app/types/pokedex-entry-type";
 import { PokedexEntry } from "../pokedex-entry";
-import { useState } from "react";
 import { useDisplayedPokemonContext } from "@/app/contexts/displayed-pokemon-context";
 
 type PokedexProps = {

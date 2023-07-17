@@ -6,7 +6,7 @@ import { PokedexEntryType } from "./types/pokedex-entry-type";
 
 const fetchData = async () => {
   let pokedex = [];
-  for (let i = 816; i <= 845; i++) {
+  for (let i = 1; i <= NUMBER_OF_POKEMON; i++) {
     const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${i}/`);
     const data = await response.json();
     pokedex.push(data);

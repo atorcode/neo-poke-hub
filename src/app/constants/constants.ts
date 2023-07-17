@@ -1,6 +1,6 @@
 import { PokemonTypeType } from "@/app/types/pokemon-type-type";
 
-export const NUMBER_OF_POKEMON = 1010;
+export const NUMBER_OF_POKEMON = 905;
 export const POKEMON_TYPES: PokemonTypeType[] = [
   "normal",
   "fighting",

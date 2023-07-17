@@ -1,21 +1,15 @@
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import { PokedexEntry } from "@/app/components/pokedex-entry";
+import { ExpandedModalProvider } from "@/app/contexts/expanded-modal-context";
 import { mewData } from "../../mocks/mew-data";
 
 describe("PokedexEntry", () => {
-  const mockState = -1;
-  const mockSetState = jest.fn();
-
   it("displays the correct Pokemon name", () => {
     render(
-      <PokedexEntry
-        entry={mewData}
-        expandedModal={mockState as number}
-        setExpandedModal={
-          mockSetState as React.Dispatch<React.SetStateAction<number>>
-        }
-      />
+      <ExpandedModalProvider>
+        <PokedexEntry entry={mewData} />
+      </ExpandedModalProvider>
     );
     const headingElement = screen.getByRole("heading", {
       level: 2,
@@ -25,13 +19,9 @@ describe("PokedexEntry", () => {
   });
   it("displays the correct Pokedex number", () => {
     render(
-      <PokedexEntry
-        entry={mewData}
-        expandedModal={mockState as number}
-        setExpandedModal={
-          mockSetState as React.Dispatch<React.SetStateAction<number>>
-        }
-      />
+      <ExpandedModalProvider>
+        <PokedexEntry entry={mewData} />
+      </ExpandedModalProvider>
     );
     const headingElement = screen.getByRole("heading", {
       level: 3,
@@ -41,26 +31,18 @@ describe("PokedexEntry", () => {
   });
   it("displays the correct types", () => {
     render(
-      <PokedexEntry
-        entry={mewData}
-        expandedModal={mockState as number}
-        setExpandedModal={
-          mockSetState as React.Dispatch<React.SetStateAction<number>>
-        }
-      />
+      <ExpandedModalProvider>
+        <PokedexEntry entry={mewData} />
+      </ExpandedModalProvider>
     );
     const pokemonTypeElement = screen.getByText(/^psychic$/i);
     expect(pokemonTypeElement).toBeInTheDocument();
   });
   it("renders the image correctly", () => {
     render(
-      <PokedexEntry
-        entry={mewData}
-        expandedModal={mockState as number}
-        setExpandedModal={
-          mockSetState as React.Dispatch<React.SetStateAction<number>>
-        }
-      />
+      <ExpandedModalProvider>
+        <PokedexEntry entry={mewData} />
+      </ExpandedModalProvider>
     );
     const imgElement = screen.getByAltText(/^mew$/i);
     expect(imgElement).toBeInTheDocument();
