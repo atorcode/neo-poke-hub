@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { capitalizeFirst } from "@/app/utils/capitalize-first";
 import { PokedexEntryType } from "@/app/types/pokedex-entry-type";
 import { PokemonTypeType } from "@/app/types/pokemon-type-type";
@@ -66,13 +67,14 @@ export const TypeBoxFilter = ({
             : "2px solid transparent",
         }}
       >
-        <img
+        <Image
           // capitalizeFirst isn't strictly necessary in file path, but adding it provides some safety
           src={`/Pokemon_Type_Icon_${capitalizeFirst(
             typeof type === "object" ? type.type.name : type
           )}.png`}
+          width={24}
+          height={24}
           alt="bug icon"
-          className="h-6 w-6"
         />
         <span className="pr-1">
           {capitalizeFirst(typeof type === "object" ? type.type.name : type)}

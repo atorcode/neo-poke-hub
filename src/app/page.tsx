@@ -1,5 +1,3 @@
-"use client";
-
 import { NUMBER_OF_POKEMON } from "@/app/constants/constants";
 import { HomePageContent } from "./components/home-page-content";
 import { PokedexEntryType } from "./types/pokedex-entry-type";

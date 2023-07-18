@@ -14,7 +14,7 @@ export const HomePageContent = ({ pokedex }: HomePageContent) => {
       <ExpandedModalProvider>
         <main className="w-screen overflow-hidden">
           <div className="relative" style={{ backgroundColor: "#101114" }}>
-            <Hero {...pokedex[0]} />
+            <Hero {...pokedex[815]} />
           </div>
           <DisplayedPokemon pokedex={pokedex} />
         </main>
