@@ -4,7 +4,7 @@
 
 ## Live Demo
 
-Coming soon
+https://neopokehub.netlify.app/
 
 ## Summary
 
