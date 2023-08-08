@@ -12,10 +12,11 @@ NeoPokeHub provides an elegantly streamlined experience for trainers in search o
 
 ## To Do
 
-- Add Who's that Pokemon minigame
+- Add pagination
 - Break components down further and organize tests better
 - Clean up code
 - Improve animations
+- Add Who's that Pokemon minigame
 
 ## Languages and Technologies
 
